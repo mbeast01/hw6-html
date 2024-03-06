@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-product {
+.product {
     width: 90%; 
     margin: 50px auto 0 auto; 
     border:3px solid rgb(102, 0, 102); 
@@ -10,7 +10,7 @@ product {
     font-family: monospace;
 }
 
-item {
+.item {
     border: 2px dashed rgb(102, 0, 102);
     width: 70%;
     height: 20%;
@@ -19,7 +19,7 @@ item {
     padding: 10px;
     display: block;
 }
-name {
+.name {
     display:inline-block; 
     font-size: 22px;
     text-transform: capitalize;
@@ -29,18 +29,19 @@ name {
     width: 150px;
     border: 2px solid rgb(102, 0, 102);
 }
-price, category{
+.price, .category{
     font-size:18px; 
     padding: 5px;
     display:inline-block;
 }
-price:before {
+.price:before {
     content:"$"; 
 }
-description {
+.description {
     display: block;
     font-size: 10px; 
     width: 95%;
+    height: 20%;
     padding: 5px;
     text-align: center;
 }
