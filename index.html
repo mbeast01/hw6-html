@@ -6,6 +6,7 @@
     <title>Products 1</title>
 </head>
 <body>
+    <div class="product">
     <script>
         var products= {
             "products": [
@@ -60,9 +61,21 @@
             ]
         };
 
-        var pstring = JSON.stringify(products);
+        
+        for (var i = 0; i < productsJSON.products.length; i++) {
+                var product = productsJSON.products[i];
+                document.write('<div class="item">');
+                document.write('<div class="name">' + product.name.trim() + '</div>');
+                document.write('<div class="price">' + product.price + '</div>');
+                document.write('<div class="category">' + product.category.join(", ") + '</div>');
+                document.write('<div class="description">' + product.description.trim() + '</div>');
+                document.write('</div>');
+        }
+
+        /*var pstring = JSON.stringify(products);
         console.log(pstring); 
-        document.write(pstring); 
+        document.write(pstring); */
     </script>
+    </div>
 </body>
 </html>
